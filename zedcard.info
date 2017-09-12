@@ -1,0 +1,7 @@
+name = Zed Card
+description = Add to Zed Card
+package = Custom
+core = 7.x
+
+version = "1.x"
+project = "drupal"
