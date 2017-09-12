@@ -6,21 +6,21 @@
 function zedcard_menu() {
   $items['zedcard'] = array(
     'title' => t('Zed Card'),
-	  'access arguments' => array('access content'), 
+    'access arguments' => array('access content'),
     'page callback' => 'zedcard_list',
-	  'type' => MENU_CALLBACK,
+    'type' => MENU_CALLBACK,
   );
   $items['zedcard/add'] = array(
     'title' => t('Add to Zed Card'),
-	  'access arguments' => array('access content'), 
+    'access arguments' => array('access content'),
     'page callback' => 'zedcard_add',
-	  'type' => MENU_CALLBACK,
+    'type' => MENU_CALLBACK,
   );
   $items['zedcard/remove'] = array(
     'title' => t('Remove from Zed Card'),
-	  'access arguments' => array('access content'), 
+    'access arguments' => array('access content'),
     'page callback' => 'zedcard_remove',
-	  'type' => MENU_CALLBACK,
+    'type' => MENU_CALLBACK,
   );
 
   return $items;
@@ -30,7 +30,7 @@ function zedcard_menu() {
 * ADD to zedcard table
 */
 function zedcard_add(){
-	if($_POST['nid']){
+  if($_POST['nid']){
     global $user;
     $allready = 0;
     $results = db_select('zedcard', 'z')
